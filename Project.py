@@ -1,6 +1,8 @@
+import pandas as pd
 import numpy as np
-n, p = [int(x) for x in input().split()]
-lista = []
-for i in range(n):
-    lista.append(input().split())
-print(np.array(lista).astype(np.float16).mean(axis=1).round(2))
+r = int(input())
+lst = [float(x) for x in input().split()]
+arr = np.array(lst)
+
+twod_arr = arr.reshape(r, -1)
+print(twod_arr)
